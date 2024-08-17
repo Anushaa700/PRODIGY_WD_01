@@ -1,0 +1,375 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    font-family: "Sofia Pro", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    color: white;
+}
+
+.head {
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    background-color: black;
+    position: fixed;
+    transition: background-color 0.3s; 
+}
+
+.lead {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: auto;
+    position: relative;
+
+}
+
+.head.scrolled li a {
+    color: #56449E;
+    font-family: Apple Chancery;
+    transition-duration: 1s;
+}
+
+.head.scrolled li a:hover {
+    text-decoration: underline 1.5px white;
+}
+
+.head.scrolled button {
+    color: #56449E;
+    font-family: Apple Chancery;
+    transition-duration: 1s;
+}
+
+.head.scrolled button:hover {
+    color: white;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    background-size: contain;
+}
+
+.logo img {
+    height: 5.5rem;
+    width: auto;
+}
+
+.panel{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.navigation-bar {
+    display: flex;
+}
+.menu li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1rem;
+    display: inline-block;
+}
+
+li a{
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover{
+    font-weight: 650;
+    text-decoration: underline 1.5px #56449E;
+    font-family: Amasis MT Pro ;
+}
+
+.menu-bars{
+    display: none;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+#menu-button{
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .menu-bars{
+        display:flex;
+    }
+
+    .navigation-bar{
+        display: none;
+   
+    }
+
+    .navigation-bar.active{
+        display: flex;
+    }
+
+    .menu{
+        display: flex;
+        color: white; 
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        position: fixed;
+        top: 5.5rem;
+        left: 0;
+        width: 100%;
+        text-align:center;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+        display: inline-block; 
+    }
+
+    .menu li {
+        display: block;
+    }
+    li a{
+        color: white;
+        text-decoration: none;
+    }
+    
+    li a:hover{
+        font-weight: 650;
+        text-decoration: underline 1.5px #56449E;
+        font-family: Amasis MT Pro ;
+    } 
+}
+
+.panel button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    height: 2rem; 
+    width: 4rem;
+    margin-right: 1rem;
+    border: 0.0001rem solid #56469E;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #56449E;
+}
+.main-section {
+    z-index: 0;
+    padding-top: 5.5rem;
+}
+
+.home {
+    height: 31.3rem;
+    width: auto;
+    background-image: url("hogwarts_castle_.jpg");
+    border: 2px solid black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    top: 10rem;
+}
+
+.home img {
+    height: auto;
+    width: auto;
+    margin-top: 10rem;
+}
+
+.home h3 {
+    margin-top: 13rem;
+    font-size: 2rem;
+    opacity: 40%;
+}
+
+.home h1 {
+    font-size: 3.5rem;
+}
+.home h3,.home h1 {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+#news, #JK-archive, #sorting-hat, #discovering{
+    padding-top: 3.1rem;
+}
+
+.news, .archive, .sort{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.5rem;
+    flex-wrap: wrap;
+} 
+
+.world{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3.5rem;
+} 
+
+.news img, .discover-img img, .archive img {
+    height: 24.7rem;
+    width: 38rem;
+    margin: 0rem auto auto auto;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+ .discover-img img {
+    object-fit: contain; 
+}  
+
+.latest-news h5, .latest-news p, .discover h5, .discover p, .archive h5, .archive p  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 1rem;
+    width: 32rem;
+    font-size: xx-large;
+    box-sizing: border-box;
+}
+
+
+
+.archive h5, .discover h5, .latest-news h5 {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.latest-news, .sub-section1, .discover  {
+    margin-bottom: 3rem;
+}
+
+.sub-section1 p, .discover p, .latest-news p {
+    margin-top: 4rem;
+    margin-right: auto;
+    width: 33rem;
+}
+
+.news-text, .section-text, .sort-text{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.wizard h5{
+    font-size: xx-large;
+    margin-bottom: 4rem;
+}
+
+.world-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+}
+
+.books, .movies, .games, .onstage {
+    display: flex;
+    width: 25%;
+    flex-direction:column;
+}
+
+.books p, .movies p, .games p, .onstage p{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.books img, .movies img, .games img, .onstage img {
+    width: 89%;
+    height: 20rem;
+    border-radius: 8rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.foot {
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+    width: 100%;
+    border-top: 0.011rem solid white;
+    margin-top: 5rem;
+}
+
+.footer-box {
+    margin: 4rem;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-box h6{
+    margin-bottom: 2rem;
+    font-size: x-large;
+}
+
+.footer-box a, .footer-box p {
+    margin-bottom: 1.5rem;
+    font-size:120%;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.box1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.facebook, .pinterest, .instagram {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    gap: 0.5rem;
+    height: auto;
+}
+
+.facebook i, .instagram i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    color: white;
+    height: 1rem;
+    margin-top: 0.2rem;
+    margin-left: -0.5rem;
+    background-color: black;
+}
+
+.pinterest i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    color: white;
+    height: 1rem;
+    margin-top: 0.2rem;
+    margin-left: -1.1rem;
+    background-color: black;
+}
